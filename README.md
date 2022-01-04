@@ -121,3 +121,31 @@ After running the above command, you will see an Image like this:
 
 # How to Infer the output
 
+To visualize the output on our custom data we will use the following code. The same code is written in the `disp_output.py` file. You can run the `python3 disp_output.py` command to visualize the result.
+
+
+```python
+import spacy
+from spacy import displacy
+
+from spacy import displacy
+MODEL_PATH = 'models/disease_model'
+ner = spacy.load(MODEL_PATH)
+text = "Selegiline - induced postural hypotension in Parkinson ' s disease : a longitudinal study on the effects of drug withdrawal.The aims of this study were to confirm our previous findings in a separate cohort of patients and to determine the time course of the cardiovascular consequences of stopping selegiline in the expectation that this might shed light on the mechanisms by which the drug causes orthostatic hypotension"
+doc = ner(text)
+# displacy.render(doc,jupyter=True, style = "ent")
+displacy.serve(doc, style="ent")
+```
+
+For the given input text, the output from the custom NER model looks like the following image:
+
+<img src = "https://drive.google.com/uc?export=view&id=1mW1gZjUlwjxQoF8jHsxpHi0mrr5L_Ter"/>
+<figure caption >Figure 3: NER to detect disease form input text </figure caption>
+
+You can see the image like above by opening `http://0.0.0.0:5000` on your browser after you run the command `python3 disp_output.py`.
+
+# References
+* [Named Entity Recognition using Spacy and Tensorflow](https://aihub.cloud.google.com/u/0/p/products%2F2290fc65-0041-4c87-a898-0289f59aa8ba)
+* [Biobert](https://github.com/dmis-lab/biobert)
+* [💥 Out now: spaCy v3.2 ](https://spacy.io)
+* [Custom Named Entity (Disease) Recognition in clinical text with spaCy 2.0 in Python](https://github.com/rsreetech/CustomNERwithspaCy)

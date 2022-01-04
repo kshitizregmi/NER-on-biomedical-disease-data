@@ -8,3 +8,4 @@ text = "Selegiline - induced postural hypotension in Parkinson ' s disease : a l
 doc = ner(text)
 # displacy.render(doc,jupyter=True, style = "ent")
 displacy.serve(doc, style="ent")
+
