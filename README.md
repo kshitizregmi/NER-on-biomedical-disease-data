@@ -105,7 +105,6 @@ At the end of the training, i.e. after 20 epochs, the custom NER model is saved 
 
 # Results
 
-# Results
 
 We can load the dumped f1-scores on the `score` folder to visualize validation and test accuracy. You can plot the accuracy using the following command:
 
@@ -121,3 +120,4 @@ After running the above command, you will see an Image like this:
 
 
 # How to Infer the output
+
