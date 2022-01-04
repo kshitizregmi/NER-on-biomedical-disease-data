@@ -76,6 +76,7 @@ The above command will download all data in [Named Entity Recognition:](https://
 Here, we will only use the `BC5CDR-disease dataset.` In the dataset, `train_dev.tsv`, `test. tsv`, `train.tsv` are the data for validation, testing and training, respectively.
 
 ### Inside train.tsv
+
 <center>
 <img src = "https://drive.google.com/uc?export=view&id=184BsKaYyecW5CPTqO2OkipADebIOpUNw"/>
 <figure caption >Figure 1: Clip of training data </figure caption>
@@ -92,3 +93,31 @@ spaCy doesn't support this format of data. Therefore we have to convert data to 
 # How to train a custom NER model ?
 
 
+We will train the custom NER model by using spaCy English pipeline `en_core_web_md` optimized for CPU. 
+
+To train the custom NER model run the following command on terminal/bash.
+
+```python 
+python3 train.py
+```
+At the end of the training, i.e. after 20 epochs, the custom NER model is saved on folder `models` as `disease_model`. Additionally, It stores the f1-score of test data and validation data calculated while training the model on the `score` folder as `test_f1scores.json` and `valid_f1scores.json`, respectively.
+
+
+# Results
+
+# Results
+
+We can load the dumped f1-scores on the `score` folder to visualize validation and test accuracy. You can plot the accuracy using the following command:
+
+```python
+python3 plot.py
+```
+After running the above command, you will see an Image like this:
+
+<center>
+<img src = "https://drive.google.com/uc?export=view&id=1-u7K5tNJhcCZDeAaYSnZ7STh8oL3cHJu"/>
+<figure caption >Figure 2: F1- score on validation and test data </figure caption>
+</center>
+
+
+# How to Infer the output
