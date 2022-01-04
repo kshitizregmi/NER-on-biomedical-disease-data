@@ -11,7 +11,7 @@ $1 billion  |44 |54 |MONEY| Monetary values, including unit.|
 
 Here, the word Apple is the organization, the word the UK is a geopolitical entity or country, and $1 billion is money. 
 
-# Custom Named Entity Recognition model to identify disease name form clinical data using spaCy
+# Custom Named Entity Recognition model to identify disease name form clinical data using spaCy V3.2
 
 The project develops a custom Named Entity Recognition model with spaCy. The custom model can recognize the disease name from the clinical text.
 # Dataset Description
