@@ -11,7 +11,7 @@ $1 billion  |44 |54 |MONEY| Monetary values, including unit.|
 
 Here, the word Apple is the organization, the word the UK is a geopolitical entity or country, and $1 billion is money. 
 
-# Custom Named Entity Recognition model with spaCy
+# Custom Named Entity Recognition model to identify disease name form clinical data using spaCy
 
 The project develops a custom Named Entity Recognition model with spaCy. The custom model can recognize the disease name from the clinical text.
 # Dataset Description
@@ -73,4 +73,22 @@ python3 download_data.py
 ```
 The above command will download all data in [Named Entity Recognition:](https://drive.google.com/file/d/1OletxmPYNkz2ltOr9pyT0b0iBtUWxslh/view).
 
-we will only use the `BC5CDR-disease dataset.` In this project, we need `train_dev.tsv, test.tsv, train.tsv` data for validation, testing and training, respectively.
+Here, we will only use the `BC5CDR-disease dataset.` In the dataset, `train_dev.tsv`, `test. tsv`, `train.tsv` are the data for validation, testing and training, respectively.
+
+### Inside train.tsv
+<center>
+<img src = "https://drive.google.com/uc?export=view&id=184BsKaYyecW5CPTqO2OkipADebIOpUNw"/>
+<figure caption >Figure 1: Clip of training data </figure caption>
+</center>
+
+Here,
+*  B: Begin entity, 
+*  I: Inside entity and,
+*  O: Outside entity
+
+spaCy doesn't support this format of data. Therefore we have to convert data to a spaCy readable format. To convert data into spacy format the method `load_data_spacy()` inside `format_to_spacy.py` is used. 
+
+
+# How to train a custom NER model ?
+
+
